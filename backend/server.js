@@ -10,7 +10,7 @@ const stream = require('stream');
 const cors = require('cors');
 
 // ... (Environment setup and constants remain the same) ...
-require('dotenv').config({ path: path.resolve(__dirname, 'doc.env') }); 
+require('dotenv').config(); 
 const GOOGLE_FONTS_API_KEY = process.env.GOOGLE_FONTS_API_KEY; 
 const FONT_LIST_URL = `https://www.googleapis.com/webfonts/v1/webfonts?key=${GOOGLE_FONTS_API_KEY}&sort=popularity`;
 
@@ -219,4 +219,5 @@ app.post('/generate', upload.fields([
 // --- SERVER START ---
 app.listen(PORT, () => {
     console.log(`Backend Core Online: http://localhost:${PORT}`);
+
 });
